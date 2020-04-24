@@ -1,0 +1,27 @@
+h1 {
+    font-family: "Exo 2";
+ }
+
+.links {
+    -moz-columns: 50px 5;
+    -webkit-columns: 50px 5;
+    columns: 50px 5;
+    height: 90%;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.btn-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+@media (max-width: 800px) {
+    .links {
+    -moz-columns: 100px 1;
+    -webkit-columns: 100px 1;
+    columns: 100px 2;
+    width: 100%;
+    height: auto;
+    }
+}

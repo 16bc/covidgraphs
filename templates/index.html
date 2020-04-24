@@ -1,0 +1,48 @@
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500&display=swap" rel="stylesheet">
+  <link href="{{ url_for('static',filename='styles.css') }}" rel="stylesheet">
+  <script src='https://www.chartjs.org/dist/2.9.3/Chart.min.js'></script>
+  <title>COVID-19 - {{ region }}</title>
+</head>
+
+<body>
+  <h1 align="center">{{ region }}</h1>
+  <div class="graph-container">
+  <canvas id="canvas" style="display: block; width: 80%; max-height: 90%;"></canvas>
+  <script>
+    var ctx = document.getElementById('canvas').getContext('2d');
+
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: {{ labels|safe }},
+            datasets: [{
+                label: 'Выявлено заражённых',
+                data: {{ values }},
+                backgroundColor: [
+                    'rgba(218, 81, 9, 0.6)',
+                ],
+                borderColor: [
+                    'rgba(204, 51, 0, 1)',
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+          scales: {
+            yAxes: [{
+              ticks: {beginAtZero: true}
+            }]
+          }
+        }
+    });
+  </script>
+  </div>
+  <div class="btn-container">
+    <a href="./"><button class="to-regions btn btn-lg btn-primary" type="button">ВЫБРАТЬ ДРУГОЙ РЕГИОН</button></a>
+  </div>
+</body>
+</html>
