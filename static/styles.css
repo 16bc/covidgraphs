@@ -1,27 +1,56 @@
-h1 {
+h1, h2 {
     font-family: "Exo 2";
+    padding-top: 14px;
+    padding-bottom: 16px;
+    background-color: #009ACB;
  }
 
-.links {
-    -moz-columns: 50px 5;
-    -webkit-columns: 50px 5;
-    columns: 50px 5;
-    height: 90%;
+body {
+    font-family: "Exo 2" !important;
+}
+
+.container-xl {
+    max-width: 1400px;
+}
+
+.links{
+    -moz-columns: 50px 6;
+    -webkit-columns: 50px 6;
+    columns: 50px 6;
+    height: auto;
     width: 90%;
-    margin: 0 auto;
+    max-width:90%
 }
 
 .btn-container {
     text-align: center;
-    margin-top: 10px;
 }
 
+.link:hover {
+    text-decoration: none;
+}
+
+.smlogo {
+    max-width: 14px;
+    margin-bottom: 4px;
+    text-decoration: none;
+}
+
+@media (max-width: 1270px) {
+    .links {
+        -moz-columns: 100px 3;
+        -webkit-columns: 100px 3;
+        columns: 100px 3;
+        width: 100%;
+        height: auto;
+    }
+}
 @media (max-width: 800px) {
     .links {
-    -moz-columns: 100px 1;
-    -webkit-columns: 100px 1;
-    columns: 100px 2;
-    width: 100%;
-    height: auto;
+        -moz-columns: 100px 2;
+        -webkit-columns: 100px 2;
+        columns: 100px 2;
+        width: 100%;
+        height: auto;
     }
 }

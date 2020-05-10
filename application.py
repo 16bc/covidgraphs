@@ -15,7 +15,7 @@ def show_list():
         for i, item in enumerate(covid.data):
             regname = item['name']
             if i == frus:
-                links += '<hr><span class=ruslabel>РОССИЯ</span><hr>'
+                links += '<hr><span class="font-weight-bold">РОССИЯ</span><hr>'
             links += '<a href="' + str(i) + '">' + regname + '</a><br>'
         print("iter")
         return render_template('list.html', links=Markup(links))
