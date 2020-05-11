@@ -5,11 +5,13 @@ env:
   EB_ENVIRONMENT_NAME      : "Covid-env"
   DEPLOY_PACKAGE_NAME      : "covid-app-${{ github.sha }}.zip"
   AWS_REGION_NAME          : "eu-west-2"
-
   
 on:
   push:
     branches: [ master ]
+    paths-ignore:
+      - "README.md"
+      - ".github/**"
 
 jobs:
   Build_and_copy:
