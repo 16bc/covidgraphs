@@ -2,4 +2,4 @@
 #### Данные Яндекса.
 Deployed to [http://covid.16bc.ru/](http://covid.16bc.ru/ "Выбрать регион")  
 
-[![](http://16bc.ru/img/covid.png)](http://covid.16bc.ru/)
+[![](http://16bc.ru/img/covid1.png)](http://covid.16bc.ru/)
